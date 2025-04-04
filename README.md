@@ -1,9 +1,10 @@
- ------------------------ [ list of API endpoints ] ------------------------
 
 
-GET     /api/todos/          - List all todos (returns array)
-POST    /api/todos/          - Create new todo
-GET     /api/todos/:id/      - Retrieve single todo
-PUT     /api/todos/:id/      - Full todo update 
-PATCH   /api/todos/:id/      - Partial todo update (used for toggle complete/edit)
-DELETE  /api/todos/:id/      - Delete todo
+          API Endpoints
+
+| Method | Endpoint | Description |
+|----------|----------|----------|
+| GET | 	https://todolist-django-54z1.onrender.com/api/todos/ | READ all todos |
+| POST | 	https://todolist-django-54z1.onrender.com/api/todos/ | CREATE a new todo |
+| DELETE | 	https://todolist-django-54z1.onrender.com/api/todos/{id}/ | DELETE a specific todo |
+| PUT | 	https://todolist-django-54z1.onrender.com/api/todos/{id}/ |UPDATE a specific todo |
