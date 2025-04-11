@@ -26,6 +26,8 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from todos.views import TodoViewSet
+from rest_framework.authtoken.views import obtain_auth_token
+from todos.views import SecureHelloView
 
 router = DefaultRouter()
 router.register(r'todos', TodoViewSet)
@@ -34,4 +36,6 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('api-auth/', include('rest_framework.urls')),
      path('admin/', admin.site.urls),
+     path('api-token-auth/', obtain_auth_token),
+     path('secure-hello/', SecureHelloView.as_view()),
 ]
